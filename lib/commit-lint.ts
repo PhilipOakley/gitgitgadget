@@ -119,7 +119,8 @@ export class LintCommit {
                 this.lines[i].slice(11).match(/\s/)) {
                 this.block(`Lines in the body of the commit messages ${""
                     }should be wrapped between 60 and ${
-                    this.maxColumns} characters.`);
+                    this.maxColumns} characters.\n`
+                     + `Exceptions are: indented lines and very long URLs/words.`);
                 break;
             }
         }
